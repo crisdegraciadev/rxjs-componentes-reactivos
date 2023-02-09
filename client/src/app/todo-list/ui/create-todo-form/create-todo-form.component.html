@@ -1,0 +1,10 @@
+<form [formGroup]="createTodoForm" (ngSubmit)="onSubmit()">
+  <mat-form-field [hideRequiredMarker]="true">
+    <mat-label><mat-icon>edit</mat-icon>Your Todo</mat-label>
+    <input matInput formControlName="text" placeholder="Todo Text" />
+  </mat-form-field>
+
+  <button mat-fab color="accent" type="submit">
+    <mat-icon>add</mat-icon>
+  </button>
+</form>

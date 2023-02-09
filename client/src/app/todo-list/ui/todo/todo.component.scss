@@ -1,0 +1,54 @@
+:host {
+  width: 100%;
+}
+
+mat-expansion-panel-header {
+  padding: 0.25rem 0rem 0.25rem 1rem;
+
+  mat-panel-title {
+    mat-icon {
+      margin-right: 0.75rem;
+      width: 2rem;
+      height: 2rem;
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1.1rem;
+      color: #000000 !important;
+    }
+  }
+}
+
+mat-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  mat-card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding-top: 0;
+    font-weight: 500;
+  }
+  mat-card-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    padding: 0 1rem;
+
+    button {
+      border-radius: 0.5rem;
+
+      mat-icon {
+        margin: 0;
+      }
+    }
+  }
+}

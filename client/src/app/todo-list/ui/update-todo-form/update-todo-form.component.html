@@ -1,0 +1,20 @@
+<div class="container">
+  <h3>Update Todo</h3>
+
+  <form [formGroup]="updateTodoForm" (ngSubmit)="onSubmit()">
+    <mat-form-field [hideRequiredMarker]="true">
+      <mat-label><mat-icon>edit</mat-icon>Update Todo</mat-label>
+      <input matInput formControlName="text" placeholder="Your new Todo" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Done</mat-label>
+      <mat-select formControlName="done">
+        <mat-option [value]="true"><mat-icon>check_circle_outline</mat-icon>Done</mat-option>
+        <mat-option [value]="false"><mat-icon>pending</mat-icon>Pending</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" type="submit">Update</button>
+  </form>
+</div>
