@@ -36,12 +36,10 @@ export class TodoListComponent implements OnInit {
   constructor(private todoService: TodoService, private snackBar: MatSnackBar, public dialog: MatDialog) {}
 
   ngOnInit(): void {
-    // * 1º Connect todos with Async Pipe
     this.todos$ = this.todoService.findAll();
   }
 
   handleCreateTodo(todoFormValue: Omit<Todo, 'id'>) {
-    // * 2º Pipe SwitchMap operator to get the new Observable
     this.todos$ = this.todoService.create(todoFormValue).pipe(
       delay(1000),
       switchMap(() => this.todoService.findAll()),
@@ -53,11 +51,9 @@ export class TodoListComponent implements OnInit {
   }
 
   handleDeleteTodo(todoId: number) {
-    // * 3º Repeat for every operation
     this.todos$ = this.todoService.delete(todoId).pipe(
       delay(1000),
       switchMap(() => this.todoService.findAll()),
-      // * 4º Add side effects
       tap({
         next: () => this.openSnackBar('TODO deleted successfully.'),
         error: () => this.openSnackBar('There was an error while deleting the TODO.'),
