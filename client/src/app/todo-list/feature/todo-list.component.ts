@@ -67,8 +67,8 @@ export class TodoListComponent implements OnInit {
       delay(1000),
       switchMap(() => this.todoService.findAll()),
       tap({
-        next: () => this.openSnackBar('TODO deleted successfully.'),
-        error: () => this.openSnackBar('There was an error while deleting the TODO.'),
+        next: () => this.openSnackBar('TODO updated successfully.'),
+        error: () => this.openSnackBar('There was an error while updating the TODO.'),
       })
     );
   }
