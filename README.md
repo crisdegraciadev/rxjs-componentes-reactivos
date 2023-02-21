@@ -24,14 +24,14 @@ Para poner en marcha la API REST debemos ejecutar el comando
 npm start
 ```
 
-La API cuenta ademas con una serie de tests e2e, que podemos ejecutar con
+La API cuenta además con una serie de tests e2e, que podemos ejecutar con
 
 ```
 npm test
 ```
 
 Por último, notar que la API REST no persiste los TODOS en una base de datos, por lo que no es necesario configurar
-ningun servicio adicional.
+ningún servicio adicional.
 
 ## 🔥 Cliente SPA
 
