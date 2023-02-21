@@ -45,7 +45,7 @@ export class TodoListComponent implements OnInit {
       switchMap(() => this.todoService.findAll()),
       tap({
         next: () => this.openSnackBar('TODO created successfully.'),
-        error: () => this.openSnackBar('There was an error while creating the TODO.'),
+        error: () => this.openSnackBar('There was an error creating the TODO.'),
       })
     );
   }
@@ -56,7 +56,7 @@ export class TodoListComponent implements OnInit {
       switchMap(() => this.todoService.findAll()),
       tap({
         next: () => this.openSnackBar('TODO deleted successfully.'),
-        error: () => this.openSnackBar('There was an error while deleting the TODO.'),
+        error: () => this.openSnackBar('There was an error deleting the TODO.'),
       })
     );
   }
@@ -68,7 +68,7 @@ export class TodoListComponent implements OnInit {
       switchMap(() => this.todoService.findAll()),
       tap({
         next: () => this.openSnackBar('TODO updated successfully.'),
-        error: () => this.openSnackBar('There was an error while updating the TODO.'),
+        error: () => this.openSnackBar('There was an error updating the TODO.'),
       })
     );
   }
